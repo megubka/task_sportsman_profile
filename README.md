@@ -10,12 +10,6 @@ Below you'll find list of features for that tool. Not all of them are necessary,
 Don't forget about quantity, though. Completing fewer tasks, but with greater attention to details will be noted. So decide on your own how to best show your best assets.
 We really appreciate your time and effort, thanks again for applying and see you at the other end!
 
-
-# Requirements
-
-### TL;DR 
-Use this code as a bootstrap for your project, do your thing and then send us the results as a .zip package.
-
 ### Development
 1. Run `npm install` in your console to install all dependencies
 2. Run `npm start` to start project in your browser
