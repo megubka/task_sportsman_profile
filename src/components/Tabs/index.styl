@@ -1,0 +1,45 @@
+.Tabs 
+    display: block
+
+.TabList
+    display: block
+    width: 100%
+    background: #263238
+    text-decoration: none
+    list-style-type: none
+    padding: 0
+    height: auto
+    -moz-column-count: 3
+    -moz-column-gap: 0
+    -webkit-column-count: 3
+    -webkit-column-gap: 0
+    column-count: 3
+    column-gap: 0
+
+.TabPanel 
+    flex: 1
+    display: none
+
+.TabPanel.is-active 
+    display: block
+
+.Button 
+    display: inline-block
+    width: 100%
+    padding: 1rem 0
+    background: none
+    border: none
+    cursor: pointer
+    font-family: inherit
+    font-size: 1rem
+    font-weight: bold
+    color: #fff
+    transition: background-color 0.2s linear
+
+.Button:focus,
+.Button:hover 
+    outline: 0
+    background-color: #37474F
+
+.Tab.is-active .Button 
+    background: #0091EA

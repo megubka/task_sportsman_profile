@@ -8,6 +8,7 @@ import Profile from '../../components/Profile'
 import Overview from '../../components/Overview'
 import Predictions from '../../components/Predictions'
 import Hints from '../../components/Hints'
+import Tabs, { TabList, Tab, TabPanel, Button } from '../../components/Tabs';
 
 import './index.styl'
 
@@ -76,9 +77,30 @@ export default class Home extends React.Component {
                 <div className="p-home">
                     <Profile {...athlete} />
                     {this.renderArrows()}
-                    <Overview {...athlete} />
-                    <Predictions athlete={athlete} disciplines={disciplines} />
-                    <Hints athlete={athlete} disciplines={disciplines} />
+                    <div className="TabContainer">
+                        <Tabs selected={1}>
+                            <TabList>
+                                <Tab>
+                                    <Button>Overview</Button>
+                                </Tab>
+                                <Tab>
+                                    <Button>Predictions</Button>
+                                </Tab>
+                                <Tab>
+                                    <Button>Hints</Button>
+                                </Tab>
+                            </TabList>
+                            <TabPanel>
+                                <Overview {...athlete} />
+                            </TabPanel>
+                            <TabPanel>
+                                <Predictions athlete={athlete} disciplines={disciplines} />
+                            </TabPanel>
+                            <TabPanel>
+                                <Hints athlete={athlete} disciplines={disciplines} />
+                            </TabPanel>
+                        </Tabs>
+                    </div>
                 </div>
             )
         else 
