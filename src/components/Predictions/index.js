@@ -31,10 +31,11 @@ export default class Predictions extends React.Component {
                 {tags.map((tag) => {
                     return (
                         <div>
-                            <button key={tag} onClick={(e) => this.setState(prevState =>
+                            <div className={`filter-btn  ${this.state[tag] ? "active" : ""}`} key={tag} onClick={(e) => this.setState(prevState =>
                             ({
                                 [tag]: !prevState[tag]
-                            }))}></button>
+                            }))}>
+                            <div className={`filter-inner-circle  ${this.state[tag] ? "active" : ""}`}></div></div>
                             <p>{setFilterName(tag, this.state[tag])}</p>
                         </div>
                     )
