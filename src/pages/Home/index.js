@@ -78,7 +78,7 @@ export default class Home extends React.Component {
                     <Profile {...athlete} />
                     {this.renderArrows()}
                     <div className="TabContainer">
-                        <Tabs selected={1}>
+                        <Tabs selected={0}>
                             <TabList>
                                 <Tab>
                                     <Button>Overview</Button>
