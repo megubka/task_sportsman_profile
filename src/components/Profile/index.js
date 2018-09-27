@@ -2,7 +2,7 @@
  * Component displaying basic info about the athlete.
  */
 
- import React from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import './index.styl'
 

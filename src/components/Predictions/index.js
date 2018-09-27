@@ -5,14 +5,49 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { disciplineScore } from '../../libs/calculate'
+import { setFilterName } from '../../libs/sorting'
 import './index.styl'
 
 export default class Predictions extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isIndividual: false,
+            ball: false,
+            riding: false,
+            martialArts: false,
+            oneOnOne: false,
+            water: false,
+            sortByName: false
+        }
+    }
+
+    renderFilters() {
+        //all tags from the state
+        const tags = ["isIndividual", "ball", "riding", "martialArts", "oneOnOne", "water", "sortByName"]
+        return (
+            <div className="filters">
+                {tags.map((tag) => {
+                    return (
+                        <div>
+                            <button key={tag} onClick={(e) => this.setState(prevState =>
+                            ({
+                                [tag]: !prevState[tag]
+                            }))}></button>
+                            <p>{setFilterName(tag, this.state[tag])}</p>
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
+
     render() {
         return (
             <section className="l-section c-predictions" >
                 <h2 className="header" >Predictions</h2>
                 <div className="content">
+                    {this.renderFilters()}
                     {this.props.disciplines.map((discipline) => {
                         return (
                             <div key={discipline.name} className="c-discipline">

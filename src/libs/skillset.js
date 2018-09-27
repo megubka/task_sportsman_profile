@@ -44,10 +44,17 @@ export const setIcon = ( skill ) => {
  * Method for setting an icon for a particular skill
  * @param {object} skillset object with an athlete skillset
  * @param {object} skill object with a particular athlete's skill
- * @param {number} maxValue maximum value of the skillset array (should display in green color)
- * @param {number} minValue minimum value of the skillset array (should display in red color)
  */
-export const setColor = (skillset, skill, maxValue, minValue) => {
+export const setColor = (skillset, skill) => {
+    
+    // Setting an array to store all skill values and define the max and min
+    let item = []
+    for (let [key, value] of Object.entries(skillset)) {
+        item.push(value)
+    }
+    const maxValue = Math.max(...item)
+    const minValue = Math.min(...item)
+
     if (maxValue == skillset[skill]) {
         return (
             <div style={{ color: "green" }}>{skillset[skill]}</div> 
