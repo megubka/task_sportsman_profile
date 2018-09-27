@@ -27,6 +27,7 @@ export default class Predictions extends React.Component {
         const tags = ["isIndividual", "ball", "riding", "martialArts", "oneOnOne", "water", "sortByName"]
         return (
             <div className="filters">
+            <h3>Sort By</h3>
                 {tags.map((tag) => {
                     return (
                         <div>
