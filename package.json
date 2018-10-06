@@ -10,11 +10,12 @@
     "react-dom-factories": "^1.0.2"
   },
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "bestzip": "1.1.4",
+    "coffeescript": "^2.3.1",
     "parcel-bundler": "^1.6.1",
     "prop-types": "^15.6.1",
-    "stylus": "^0.54.5",
-    "coffeescript": "^2.3.1"
+    "stylus": "^0.54.5"
   },
   "scripts": {
     "start": "parcel index.html --open",
