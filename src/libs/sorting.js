@@ -57,30 +57,3 @@ export const setFiltering = (tagsFromState, discipline) => {
         }
     }
 }
-
-export const sortByName = (sorting ,disciplines) => {
-    var sortable = [];
-    console.log(disciplines[1])
-    
-    /* if (sorting == true) {
-        return disciplines.sort((a, b) => {
-            if (a.name < b.name) {
-                return -1
-            } else if (b.name < a.name) {
-                return 1
-            } else {
-                return 0
-            }
-        })
-    } else {
-        return disciplines.sort((a, b) => {
-            if (a.name < b.name) {
-                return -1
-            } else if (b.name < a.name) {
-                return 1
-            } else {
-                return 0
-            }
-        })
-    } */
-}
